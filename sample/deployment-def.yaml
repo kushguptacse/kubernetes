@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    app: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapppod
+  replicas: 2
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      name: nginx1
+      labels:
+        app: myapppod
+    spec:
+      containers:
+        - name: nginx
+          image: nginx 
+          env:
+            - name: password
+              value: mysecretpassword
