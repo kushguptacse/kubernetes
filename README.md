@@ -1,4 +1,5 @@
 # kubernetes
+For notes refer kubernetesNotes.doc
 
 # requirements
 kubernetes must be installed. it comes with docker desktop by default.
